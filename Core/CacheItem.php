@@ -64,6 +64,10 @@ class CacheItem implements CacheItemInterface
     {
         $this->cacheItemPool = $cacheItemPool;
 
+        if (null === $this->expiration) {
+            $this->expiresAfter($this->getCacheItemPool()->getPoolDefaultTTL());
+        }
+
         return $this;
     }
 
@@ -137,7 +141,10 @@ class CacheItem implements CacheItemInterface
     public function set($value)
     {
         $this->value = $value;
-        $this->expiresAfter($this->getCacheItemPool()->getPoolDefaultTTL());
+
+        if ($this->getCacheItemPool()) {
+            $this->expiresAfter($this->getCacheItemPool()->getPoolDefaultTTL());
+        }
 
         return $this;
     }
