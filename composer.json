@@ -1,0 +1,34 @@
+{
+  "name": "epwt/cache",
+  "type": "library",
+  "description": "EPWT PSR-6 Cache Implementation",
+  "keywords": ["epwt", "cache", "psr-6", "redis"],
+  "homepage": "http://github.com/gcds",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Aurimas Niekis",
+      "email": "aurimas.niekis@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3",
+    "ext-predis": "*",
+    "epwt/psr-cache": "1.0.0"
+  },
+  "suggest": {
+    "ext-igbinary": "Faster and smaller serializer for SerializerTrait"
+  },
+  "provide": {
+    "psr/cache-implementation": "1.0.0"
+  },
+  "autoload": {
+    "psr-4": { "EPWT\\Cache\\": "" }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  },
+  "minimum-stability": "dev"
+}
