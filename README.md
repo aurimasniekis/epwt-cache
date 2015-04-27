@@ -8,11 +8,10 @@ This library provides PSR-6 based caching.
 ## Requirements
 
  * PHP >= 5.3
- * PHPRedis extension
 
 ## Currently Implemented Drivers
 
-* Redis (PHP Redis extension only)
+* Redis (predis & phpredis supported)
 
 Usage
 -------
