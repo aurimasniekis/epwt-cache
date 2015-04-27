@@ -13,7 +13,7 @@
   ],
   "require": {
     "php": ">=5.3",
-    "ext-predis": "*",
+    "ext-redis": "*",
     "epwt/psr-cache": "1.0.0"
   },
   "suggest": {
