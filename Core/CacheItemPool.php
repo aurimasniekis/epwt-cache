@@ -111,7 +111,7 @@ class CacheItemPool implements CacheItemPoolInterface
      * @param string $key
      *   The key for which to return the corresponding Cache Item.
      *
-     * @return \Psr\Cache\CacheItemInterface
+     * @return CacheItem|CacheItemInterface
      *   The corresponding Cache Item.
      * @throws \Psr\Cache\InvalidArgumentException
      *   If the $key string is not a legal value a \Psr\Cache\InvalidArgumentException
@@ -131,7 +131,7 @@ class CacheItemPool implements CacheItemPoolInterface
      * @param array $keys
      * An indexed array of keys of items to retrieve.
      *
-     * @return array|\Traversable
+     * @return array|\Traversable|CacheItem[]|CacheItemInterface[]
      * A traversable collection of Cache Items keyed by the cache keys of
      * each item. A Cache item will be returned for each key, even if that
      * key is not found. However, if no keys are specified then an empty
@@ -180,14 +180,15 @@ class CacheItemPool implements CacheItemPoolInterface
     /**
      * Persists a cache item immediately.
      *
-     * @param CacheItemInterface $item
+     * @param CacheItem|CacheItemInterface $item
      *   The cache item to save.
      *
-     * @return static
-     *   The invoked object.
+     * @return static The invoked object.
+     * The invoked object.
      */
     public function save(CacheItemInterface $item)
     {
+        $item->setCacheItemPool($this);
         $key = [$this->getPoolName(), $item->getKey()];
         $key = $this->getDriver()->buildKey($key);
 
@@ -199,7 +200,7 @@ class CacheItemPool implements CacheItemPoolInterface
     /**
      * Sets a cache item to be persisted later.
      *
-     * @param CacheItemInterface $item
+     * @param CacheItem|CacheItemInterface $item
      *   The cache item to save.
      *
      * @return static
