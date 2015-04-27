@@ -14,7 +14,8 @@
   "require": {
     "php": ">=5.3",
     "ext-redis": "*",
-    "epwt/psr-cache": "1.0.0"
+    "epwt/psr-cache": "1.0.0",
+    "epwt/utils": "dev-master"
   },
   "suggest": {
     "ext-igbinary": "Faster and smaller serializer for SerializerTrait"
