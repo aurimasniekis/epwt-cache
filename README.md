@@ -3,6 +3,8 @@ EPWT Cache
 [![Latest Stable Version](https://poser.pugx.org/epwt/cache/v/stable)](https://packagist.org/packages/epwt/cache) [![Total Downloads](https://poser.pugx.org/epwt/cache/downloads)](https://packagist.org/packages/epwt/cache) [![Latest Unstable Version](https://poser.pugx.org/epwt/cache/v/unstable)](https://packagist.org/packages/epwt/cache) [![License](https://poser.pugx.org/epwt/cache/license)](https://packagist.org/packages/epwt/cache)
 [![Analytics](https://ga-beacon.appspot.com/UA-62353612-1/gcds/epwt-cache)](https://github.com/igrigorik/ga-beacon) 
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/736ce78f-ddec-4742-a475-c9a8725eaed0/big.png)](https://insight.sensiolabs.com/projects/736ce78f-ddec-4742-a475-c9a8725eaed0)
+
 This library provides PSR-6 based caching.
 
 ## Requirements
