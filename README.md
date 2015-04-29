@@ -7,7 +7,7 @@ This library provides PSR-6 based caching.
 
 ## Requirements
 
- * PHP >= 5.3
+ * PHP >= 5.4
 
 ## Currently Implemented Drivers
 
