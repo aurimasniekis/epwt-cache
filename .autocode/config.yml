@@ -1,0 +1,7 @@
+name: gcds/epwt-cache
+author:
+  name: Aurimas Niekis
+  email: aurimas@niekis.lt
+  url: 'http://aurimas.niekis.lt'
+copyright: 2015 Aurimas Niekis
+description: EPWT Cache Bundle for Symfony
