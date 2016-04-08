@@ -13,7 +13,7 @@
   ],
   "require": {
     "php": ">=5.4",
-    "epwt/psr-cache": "1.0.0",
+    "psr/cache": "~1.0",
     "epwt/utils": "~1.0"
   },
   "suggest": {
